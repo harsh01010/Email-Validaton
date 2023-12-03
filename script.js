@@ -18,6 +18,8 @@ async function validate(){
     document.querySelector(".loader").classList.toggle("not-vis");
     //console.log(JSON.stringify(data));
     //result.innerHTML = JSON.stringify(data);
+    result_head.innerHTML = '';
+    result_detail.innerHTML = '';
     console.log(data.message);
          const msg = data.message;
       if(msg === 'Validation error'){
