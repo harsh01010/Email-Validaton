@@ -9,8 +9,13 @@ async function validate(){
     email = inp.value;
     inp.value = "";
     const url = `https://api.emailvalidation.io/v1/info?apikey=${key}&email=${email}`;
+    console.log("loading...");
+    document.querySelector(".loader").classList.toggle("not-vis");
+
     const response = await fetch(url);
     const data = await response.json();
+    console.log("loaded...");
+    document.querySelector(".loader").classList.toggle("not-vis");
     //console.log(JSON.stringify(data));
     //result.innerHTML = JSON.stringify(data);
     console.log(data.message);
